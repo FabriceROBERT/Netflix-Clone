@@ -1,0 +1,38 @@
+[debug] [2023-04-15T16:34:30.646Z] ----------------------------------------------------------------------
+[debug] [2023-04-15T16:34:30.649Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\fabri\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2023-04-15T16:34:30.649Z] CLI Version:   11.26.0
+[debug] [2023-04-15T16:34:30.649Z] Platform:      win32
+[debug] [2023-04-15T16:34:30.649Z] Node Version:  v16.18.0
+[debug] [2023-04-15T16:34:30.651Z] Time:          Sat Apr 15 2023 18:34:30 GMT+0200 (heure d’été d’Europe centrale)
+[debug] [2023-04-15T16:34:30.651Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-15T16:34:30.747Z] Field ".functions" in "firebase.json" is possibly invalid: should be object
+[debug] [2023-04-15T16:34:30.748Z] Object ".functions[0]" in "firebase.json" has unknown property: {"additionalProperty":"redeploy"}
+[debug] [2023-04-15T16:34:30.748Z] Field ".functions" in "firebase.json" is possibly invalid: should match some schema in anyOf
+[debug] [2023-04-15T16:34:30.754Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-15T16:34:30.755Z] > authorizing via signed-in user (fabricerob2002@gmail.com)
+[debug] [2023-04-15T16:34:30.755Z] [iam] checking project netflix-clone-62879 for permissions ["firebase.projects.get"]
+[debug] [2023-04-15T16:34:30.757Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflix-clone-62879:testIamPermissions [none]
+[debug] [2023-04-15T16:34:30.757Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflix-clone-62879:testIamPermissions x-goog-quota-user=projects/netflix-clone-62879
+[debug] [2023-04-15T16:34:30.757Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflix-clone-62879:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-04-15T16:34:31.839Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflix-clone-62879:testIamPermissions 200
+[debug] [2023-04-15T16:34:31.840Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflix-clone-62879:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-04-15T16:34:31.844Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/netflix-clone-62879 [none]
+[debug] [2023-04-15T16:34:32.205Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/netflix-clone-62879 200
+[debug] [2023-04-15T16:34:32.205Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/netflix-clone-62879 {"projectId":"netflix-clone-62879","projectNumber":"572799149595","displayName":"netflix-clone","name":"projects/netflix-clone-62879","resources":{"hostingSite":"netflix-clone-62879"},"state":"ACTIVE","etag":"1_f8c42798-4dd9-458a-aa89-26c90f139246"}
+[info] 
+[info] === Serving from 'C:\Users\fabri\OneDrive\Bureau\netflix-test'...
+[info] 
+[debug] [2023-04-15T16:34:32.233Z] defaultcredentials: writing to file C:\Users\fabri\AppData\Roaming\firebase\fabricerob2002_gmail_com_application_default_credentials.json
+[debug] [2023-04-15T16:34:32.235Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/netflix-clone-62879/sites 
+[debug] [2023-04-15T16:34:32.249Z] Setting GAC to C:\Users\fabri\AppData\Roaming\firebase\fabricerob2002_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\fabri\\AppData\\Roaming\\firebase\\fabricerob2002_gmail_com_application_default_credentials.json"}}
+[debug] [2023-04-15T16:34:32.252Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/netflix-clone-62879/adminSdkConfig [none]
+[debug] [2023-04-15T16:34:32.570Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/netflix-clone-62879/adminSdkConfig 200
+[debug] [2023-04-15T16:34:32.571Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/netflix-clone-62879/adminSdkConfig {"projectId":"netflix-clone-62879","storageBucket":"netflix-clone-62879.appspot.com"}
+[debug] [2023-04-15T16:34:32.611Z] Error: listen EADDRINUSE: address already in use 127.0.0.1:5001
+    at Server.setupListenHandle [as _listen2] (node:net:1463:16)
+    at listenInCluster (node:net:1511:12)
+    at GetAddrInfoReqWrap.doListen [as callback] (node:net:1660:7)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:8)
+[error] 
+[error] Error: An unexpected error has occurred.
