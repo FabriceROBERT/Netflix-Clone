@@ -61,6 +61,8 @@
   text-align: center;
   margin-right: auto;
   margin-left: auto;
+  left: 0;
+  right: 0;
 }
 
 .LS__Input > form > input {

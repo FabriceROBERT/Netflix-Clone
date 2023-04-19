@@ -9,7 +9,7 @@
     "@testing-library/user-event": "^14.4.3",
     "axios": "^1.3.5",
     "babel-preset-es2015": "^6.24.1",
-    "firebase": "^9.19.1",
+    "firebase": "^8.10.0",
     "movie-trailer": "^3.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
