@@ -4,18 +4,19 @@ import HomeScreen from "./pages/HomeScreen";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoginScreen from "./pages/LoginScreen";
 import { auth } from "./Firebase";
-import { useDispatch } from "react-redux";
-import { login, logout } from "./features/counter/userSlice";
+import ProfileScreen from "./pages/ProfileScreen";
+import "./features/counter/userSlice.js";
+import { useDispatch, useSelector } from "react-redux";
+import { login, logout, selectUser } from "./features/counter/userSlice";
 
 function App() {
-  const user = null;
+  const user = useSelector(selectUser);
   const dispatch = useDispatch();
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((userAuth) => {
       if (userAuth) {
         // Logged in
-        console.log(userAuth);
         dispatch(
           login({
             uid: userAuth.uid,
@@ -24,11 +25,11 @@ function App() {
         );
       } else {
         // Logged out
-        dispatch(logout);
+        dispatch(logout());
       }
     });
     return unsubscribe;
-  }, []);
+  }, [dispatch]);
 
   return (
     <BrowserRouter>
@@ -37,7 +38,10 @@ function App() {
           {!user ? (
             <Route path="/" element={<LoginScreen />} />
           ) : (
-            <Route path="/" element={<HomeScreen />} />
+            <>
+              <Route path="/profile" element={<ProfileScreen />} />
+              <Route path="/" element={<HomeScreen />} />
+            </>
           )}
         </Routes>
       </div>
