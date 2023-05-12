@@ -59,3 +59,7 @@
 .PS_Info > img {
   height: 100px;
 }
+
+.PlansScreen_plan--disablad > button {
+  background-color: gray !important;
+}
