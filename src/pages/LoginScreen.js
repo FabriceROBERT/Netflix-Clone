@@ -13,7 +13,7 @@ const LoginScreen = () => {
           alt=""
         />
         <button className="BTLS" onClick={() => setSignIn(true)}>
-          Sing In
+          Sign In
         </button>
         <div className="LS__gradient"></div>
         <div className="LS__body">
